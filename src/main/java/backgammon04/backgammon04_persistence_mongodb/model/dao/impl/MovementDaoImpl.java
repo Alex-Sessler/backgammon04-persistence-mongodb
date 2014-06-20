@@ -13,7 +13,7 @@ import backgammon04.model.Movement;
 import backgammon04.model.Player;
 import backgammon04.model.dao.MovementDao;
 
-@Repository("mongoMovementDao")
+@Repository
 public class MovementDaoImpl extends AbstractMongoDao implements MovementDao {
 
 	@Override

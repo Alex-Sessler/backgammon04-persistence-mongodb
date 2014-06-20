@@ -9,7 +9,7 @@ import backgammon04.model.Board;
 import backgammon04.model.Point;
 import backgammon04.model.dao.PointDao;
 
-@Repository("mongoPointDao")
+@Repository
 public class PointDaoImpl extends AbstractMongoDao implements PointDao {
 
 	@Override

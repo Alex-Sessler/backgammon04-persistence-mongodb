@@ -11,7 +11,7 @@ import backgammon04.model.User;
 import backgammon04.model.dao.PlayerDao;
 import backgammon04.util.Color;
 
-@Repository("mongoPlayerDao")
+@Repository
 public class PlayerDaoImpl extends AbstractMongoDao implements PlayerDao {
 
 	@Override

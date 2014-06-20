@@ -11,7 +11,7 @@ import backgammon04.model.Game;
 import backgammon04.model.User;
 import backgammon04.model.dao.GameDao;
 
-@Repository("mongoGameDao")
+@Repository
 public class GameDaoImpl extends AbstractMongoDao implements GameDao {
 
 	@Override

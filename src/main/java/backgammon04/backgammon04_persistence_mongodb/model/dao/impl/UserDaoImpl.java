@@ -8,7 +8,7 @@ import backgammon04.backgammon04_persistence_mongodb.model.impl.UserImpl;
 import backgammon04.model.User;
 import backgammon04.model.dao.UserDao;
 
-@Repository("mongoUserDao")
+@Repository
 public class UserDaoImpl extends AbstractMongoDao implements UserDao {
 
 	@Override

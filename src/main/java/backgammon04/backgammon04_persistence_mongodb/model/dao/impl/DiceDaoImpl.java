@@ -8,7 +8,7 @@ import backgammon04.backgammon04_persistence_mongodb.model.impl.DiceImpl;
 import backgammon04.model.Dice;
 import backgammon04.model.dao.DiceDao;
 
-@Repository("mongoDiceDao")
+@Repository
 public class DiceDaoImpl extends AbstractMongoDao implements DiceDao {
 
 	@Override

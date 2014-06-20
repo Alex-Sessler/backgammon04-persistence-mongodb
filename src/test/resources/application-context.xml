@@ -17,17 +17,7 @@
 
 	<tx:annotation-driven />
 
-	<context:component-scan base-package="model" />
-
-	<bean id="myProperties"
-		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-		<property name="properties">
-			<props>
-				<prop key="group_id">backgammon04</prop>
-				<prop key="artifact_id">backgammon04_persistence_mongodb</prop>
-			</props>
-		</property>
-	</bean>
+	<context:component-scan base-package="backgammon04.backgammon04_persistence_mongodb.model.dao.impl" />
 
 	<!-- Factory bean that creates the Mongo instance -->
 	<bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
@@ -39,21 +29,4 @@
 		<constructor-arg name="mongo" ref="mongo" />
 		<constructor-arg name="databaseName" value="sesebackgammon" />
 	</bean>
-
-	<bean id="userDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.UserDaoImpl"></bean>
-	<bean id="playerDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.PlayerDaoImpl"></bean>
-	<bean id="pointDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.PointDaoImpl"></bean>
-	<bean id="gameDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.GameDaoImpl"></bean>
-	<bean id="boardDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.BoardDaoImpl"></bean>
-	<bean id="checkerDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.CheckerDaoImpl"></bean>
-	<bean id="diceDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.DiceDaoImpl"></bean>
-	<bean id="movementDao"
-		class="backgammon04.backgammon04_persistence_mongodb.model.dao.impl.MovementDaoImpl"></bean>
 </beans>

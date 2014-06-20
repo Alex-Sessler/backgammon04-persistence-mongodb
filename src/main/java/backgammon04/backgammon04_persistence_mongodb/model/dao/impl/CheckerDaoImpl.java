@@ -8,7 +8,7 @@ import backgammon04.backgammon04_persistence_mongodb.model.impl.CheckerImpl;
 import backgammon04.model.Checker;
 import backgammon04.model.dao.CheckerDao;
 
-@Repository("mongoCheckerDao")
+@Repository
 public class CheckerDaoImpl extends AbstractMongoDao implements CheckerDao {
 
 	@Override

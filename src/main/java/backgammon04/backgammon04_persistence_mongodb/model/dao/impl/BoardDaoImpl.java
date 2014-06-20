@@ -8,7 +8,7 @@ import backgammon04.backgammon04_persistence_mongodb.model.impl.BoardImpl;
 import backgammon04.model.Board;
 import backgammon04.model.dao.BoardDao;
 
-@Repository("mongoBoardDao")
+@Repository
 public class BoardDaoImpl extends AbstractMongoDao implements BoardDao {
 
 	@Override
