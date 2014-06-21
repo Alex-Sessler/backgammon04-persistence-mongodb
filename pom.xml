@@ -37,8 +37,9 @@
 
 	<repositories>
 		<repository>
-			<id>repo</id>
-			<url>https://github.com/Alex-Sessler/backgammon04-mvn-repo</url>
+			<id>lenny2</id>
+			<name>lenny2-snapshots</name>
+			<url>http://lenny2.in.htwg-konstanz.de:8081/artifactory/libs-snapshot-local</url>
 		</repository>
 	</repositories>
 
