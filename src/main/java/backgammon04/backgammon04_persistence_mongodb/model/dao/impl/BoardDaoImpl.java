@@ -1,5 +1,7 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
@@ -15,6 +17,9 @@ public class BoardDaoImpl extends AbstractMongoDao implements BoardDao {
 	public void save(Board board) {
 		if (!getMongoTemplate().collectionExists(BoardImpl.class)) {
 			getMongoTemplate().createCollection(BoardImpl.class);
+		}
+		if (board.getId() == 0) {
+			board.setId(new Date().getTime());
 		}
 		getMongoTemplate().save(board);
 

@@ -1,5 +1,6 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Sort;
@@ -20,6 +21,9 @@ public class MovementDaoImpl extends AbstractMongoDao implements MovementDao {
 	public void save(Movement movement) {
 		if (!getMongoTemplate().collectionExists(MovementImpl.class)) {
 			getMongoTemplate().createCollection(MovementImpl.class);
+		}
+		if (movement.getId() == 0) {
+			movement.setId(new Date().getTime());
 		}
 		getMongoTemplate().insert(movement);
 

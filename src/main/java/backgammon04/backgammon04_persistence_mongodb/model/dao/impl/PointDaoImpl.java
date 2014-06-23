@@ -1,5 +1,7 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
@@ -14,6 +16,12 @@ public class PointDaoImpl extends AbstractMongoDao implements PointDao {
 
 	@Override
 	public void save(Point point) {
+		if (!getMongoTemplate().collectionExists(PointImpl.class)) {
+			getMongoTemplate().createCollection(PointImpl.class);
+		}
+		if (point.getId() == 0) {
+			point.setId(new Date().getTime());
+		}
 		getMongoTemplate().save(point);
 	}
 

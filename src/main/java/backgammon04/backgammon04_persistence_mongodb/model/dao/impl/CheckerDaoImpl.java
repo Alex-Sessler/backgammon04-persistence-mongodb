@@ -1,5 +1,7 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
@@ -15,6 +17,9 @@ public class CheckerDaoImpl extends AbstractMongoDao implements CheckerDao {
 	public void save(Checker checker) {
 		if (!getMongoTemplate().collectionExists(CheckerImpl.class)) {
 			getMongoTemplate().createCollection(CheckerImpl.class);
+		}
+		if (checker.getId() == 0) {
+			checker.setId(new Date().getTime());
 		}
 		getMongoTemplate().save(checker);
 

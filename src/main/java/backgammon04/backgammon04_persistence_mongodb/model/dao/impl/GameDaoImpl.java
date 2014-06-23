@@ -1,5 +1,6 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -18,6 +19,9 @@ public class GameDaoImpl extends AbstractMongoDao implements GameDao {
 	public void save(Game game) {
 		if (!getMongoTemplate().collectionExists(GameImpl.class)) {
 			getMongoTemplate().createCollection(GameImpl.class);
+		}
+		if (game.getId() == 0) {
+			game.setId(new Date().getTime());
 		}
 		getMongoTemplate().save(game);
 	}

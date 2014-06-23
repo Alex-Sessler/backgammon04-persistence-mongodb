@@ -1,5 +1,7 @@
 package backgammon04.backgammon04_persistence_mongodb.model.dao.impl;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
@@ -15,6 +17,9 @@ public class DiceDaoImpl extends AbstractMongoDao implements DiceDao {
 	public void save(Dice dice) {
 		if (!getMongoTemplate().collectionExists(DiceImpl.class)) {
 			getMongoTemplate().createCollection(DiceImpl.class);
+		}
+		if (dice.getId() == 0) {
+			dice.setId(new Date().getTime());
 		}
 		getMongoTemplate().save(dice);
 
