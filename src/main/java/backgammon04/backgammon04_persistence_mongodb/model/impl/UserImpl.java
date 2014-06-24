@@ -1,9 +1,5 @@
 package backgammon04.backgammon04_persistence_mongodb.model.impl;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,8 +9,6 @@ import backgammon04.backgammon04_persistence_interface.model.User;
 public class UserImpl implements User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false, unique = true)
 	private long id;
 
 	private String username;
