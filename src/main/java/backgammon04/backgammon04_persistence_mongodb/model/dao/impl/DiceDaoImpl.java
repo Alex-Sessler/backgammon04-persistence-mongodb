@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import backgammon04.backgammon04_persistence_interface.model.Dice;
+import backgammon04.backgammon04_persistence_interface.model.dao.DiceDao;
 import backgammon04.backgammon04_persistence_mongodb.model.impl.DiceImpl;
-import backgammon04.model.Dice;
-import backgammon04.model.dao.DiceDao;
 
 @Repository
 public class DiceDaoImpl extends AbstractMongoDao implements DiceDao {

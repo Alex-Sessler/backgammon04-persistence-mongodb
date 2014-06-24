@@ -4,7 +4,7 @@
 
 	<groupId>backgammon04</groupId>
 	<artifactId>backgammon04-persistence-mongodb</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>backgammon04-persistence-mongodb</name>
@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>backgammon04</groupId>
 			<artifactId>backgammon04-persistence-interface</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>0.0.4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

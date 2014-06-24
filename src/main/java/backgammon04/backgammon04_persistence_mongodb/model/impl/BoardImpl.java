@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import backgammon04.model.Board;
-import backgammon04.model.Game;
-import backgammon04.model.Point;
+import backgammon04.backgammon04_persistence_interface.model.Board;
+import backgammon04.backgammon04_persistence_interface.model.Game;
+import backgammon04.backgammon04_persistence_interface.model.Point;
 
 @Document(collection = "board")
 public class BoardImpl implements Board {

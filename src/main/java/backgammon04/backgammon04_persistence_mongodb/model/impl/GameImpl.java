@@ -9,12 +9,12 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import backgammon04.backgammon04_persistence_interface.model.Board;
+import backgammon04.backgammon04_persistence_interface.model.Game;
+import backgammon04.backgammon04_persistence_interface.model.Movement;
+import backgammon04.backgammon04_persistence_interface.model.Player;
+import backgammon04.backgammon04_persistence_interface.util.Color;
 import backgammon04.backgammon04_persistence_mongodb.util.JsonDateSerializer;
-import backgammon04.model.Board;
-import backgammon04.model.Game;
-import backgammon04.model.Movement;
-import backgammon04.model.Player;
-import backgammon04.util.Color;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 

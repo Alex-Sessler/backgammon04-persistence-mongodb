@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import backgammon04.backgammon04_persistence_interface.model.Dice;
+import backgammon04.backgammon04_persistence_interface.model.Movement;
 import backgammon04.backgammon04_persistence_mongodb.util.JsonDateSerializer;
-import backgammon04.model.Dice;
-import backgammon04.model.Movement;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 

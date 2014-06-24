@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import backgammon04.backgammon04_persistence_interface.model.User;
+import backgammon04.backgammon04_persistence_interface.model.dao.UserDao;
 import backgammon04.backgammon04_persistence_mongodb.model.impl.UserImpl;
-import backgammon04.model.User;
-import backgammon04.model.dao.UserDao;
 
 @Repository
 public class UserDaoImpl extends AbstractMongoDao implements UserDao {

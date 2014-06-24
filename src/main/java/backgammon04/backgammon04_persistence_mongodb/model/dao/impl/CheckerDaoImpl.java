@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import backgammon04.backgammon04_persistence_interface.model.Checker;
+import backgammon04.backgammon04_persistence_interface.model.dao.CheckerDao;
 import backgammon04.backgammon04_persistence_mongodb.model.impl.CheckerImpl;
-import backgammon04.model.Checker;
-import backgammon04.model.dao.CheckerDao;
 
 @Repository
 public class CheckerDaoImpl extends AbstractMongoDao implements CheckerDao {

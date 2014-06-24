@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import backgammon04.backgammon04_persistence_interface.model.Board;
+import backgammon04.backgammon04_persistence_interface.model.dao.BoardDao;
 import backgammon04.backgammon04_persistence_mongodb.model.impl.BoardImpl;
-import backgammon04.model.Board;
-import backgammon04.model.dao.BoardDao;
 
 @Repository
 public class BoardDaoImpl extends AbstractMongoDao implements BoardDao {

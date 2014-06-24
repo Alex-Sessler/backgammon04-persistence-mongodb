@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import backgammon04.model.dao.DiceDao;
+import backgammon04.backgammon04_persistence_interface.model.dao.DiceDao;
 
 @Ignore
 @RunWith(value = SpringJUnit4ClassRunner.class)

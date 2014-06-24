@@ -7,9 +7,9 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import backgammon04.model.Checker;
-import backgammon04.model.Player;
-import backgammon04.model.Point;
+import backgammon04.backgammon04_persistence_interface.model.Checker;
+import backgammon04.backgammon04_persistence_interface.model.Player;
+import backgammon04.backgammon04_persistence_interface.model.Point;
 
 @Document(collection = "checker")
 public class CheckerImpl implements Checker {
